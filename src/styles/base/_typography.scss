@@ -1,0 +1,9 @@
+@import '@/abstracts/variables';
+
+.h1 {
+  color: $brand-600;
+
+  &:hover {
+    color: $brand-700;
+  }
+}

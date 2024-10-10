@@ -1,0 +1,45 @@
+@import '@/abstracts/variables';
+
+// Миксин для мобильного подхода
+@mixin respond-to-mobile($breakpoint) {
+  @if $breakpoint == xs {
+    @media (min-width: $xs-break) { @content; }
+  }
+  @if $breakpoint == sm {
+    @media (min-width: $sm-break) { @content; }
+  }
+  @if $breakpoint == md {
+    @media (min-width: $md-break) { @content; }
+  }
+  @if $breakpoint == lg {
+    @media (min-width: $lg-break) { @content; }
+  }
+  @if $breakpoint == xl {
+    @media (min-width: $xl-break) { @content; }
+  }
+  @if $breakpoint == xxl {
+    @media (min-width: $xxl-break) { @content; }
+  }
+}
+
+// Миксин для десктопного подхода
+@mixin respond-to-desktop($breakpoint) {
+  @if $breakpoint == xs {
+    @media (max-width: $xs-break) { @content; }
+  }
+  @if $breakpoint == sm {
+    @media (max-width: $sm-break) { @content; }
+  }
+  @if $breakpoint == md {
+    @media (max-width: $md-break) { @content; }
+  }
+  @if $breakpoint == lg {
+    @media (max-width: $lg-break) { @content; }
+  }
+  @if $breakpoint == xl {
+    @media (max-width: $xl-break) { @content; }
+  }
+  @if $breakpoint == xxl {
+    @media (max-width: $xxl-break) { @content; }
+  }
+}

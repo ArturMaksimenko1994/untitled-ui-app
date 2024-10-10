@@ -1,0 +1,38 @@
+@import '@/abstracts/variables';
+
+.header {
+  padding: 18px 0;
+  border-bottom: 1px solid $gray-100;
+
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__logo {
+
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex: 1;
+
+    & > a {
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 150%;
+      color: var(--gray-600);
+    }
+  }
+
+  &__aut {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}

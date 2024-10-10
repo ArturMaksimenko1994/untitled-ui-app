@@ -1,0 +1,58 @@
+.alert {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  border-radius: 4px;
+  padding: 20px 24px 20px 20px;
+  width: 100%;
+
+  &.default {
+    border: 1px solid rgb(217, 216, 255);
+    background: rgb(240, 240, 255);
+  }
+
+  &.success {
+    border: 1px solid rgb(198, 240, 194);
+    background: rgb(234, 251, 231);
+  }
+
+  &.danger {
+    border: 1px solid rgb(245, 192, 184);
+    background: rgb(252, 236, 234);
+  }
+
+  &.warning {
+    border: 1px solid rgb(250, 231, 185);
+    background: rgb(253, 244, 220);
+  }
+
+  &__icon {
+
+  }
+
+  &__svg {
+    width: 20px;
+    height: 20px;
+
+    &.default {
+
+    }
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 120%;
+    font-weight: 600;
+    color: rgb(50, 50, 77);
+  }
+
+  &__message {
+    @extend .alert__title; // Наследуем стили
+    font-weight: 400; // Переопределяем конкретные свойства
+    align-items: start;
+    display: flex;
+    flex-flow: wrap;
+    gap: 8px;
+  }
+}
