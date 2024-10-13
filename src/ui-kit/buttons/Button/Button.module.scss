@@ -7,11 +7,12 @@
   justify-content: center;
   outline: none;
   border-radius: 8px;
-  cursor: pointer;
-  line-height: 120%;
+  line-height: 150%;
   text-decoration: none;
   transition: background-color .3s, color .3s;
   font-weight: 600;
+  border: none;
+  cursor: pointer;
 
   &:focus {
     outline: none;

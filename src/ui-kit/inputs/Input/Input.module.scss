@@ -1,0 +1,48 @@
+@import '@/abstracts/variables';
+
+.input {
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        border-radius: 8px;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    &__custom {
+        padding: 10px 14px;
+        border: 1px solid $gray-300;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: box-shadow 0.3s;
+        box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+
+        &:hover {
+            border: 1px solid $brand-300;
+            box-shadow: 0 0 0 4px $brand-100, 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+        }
+    }
+
+    &__ghost {
+        outline: none;
+        border: none;
+        padding: 0;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: $gray-500;
+    }
+
+    &__message {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        color: $gray-600;
+    }
+}

@@ -1,7 +1,9 @@
+import styles from  "./register.module.scss";
+
 const PageRegister = () => {
   return (
-    <div>
-      Страница Регистрации
+    <div className={styles.page}>
+      <h1>регистрация</h1>
     </div>
   );
 };
