@@ -1,4 +1,5 @@
 import styles from "./login.module.scss";
+import Image from 'next/image'
 import Input from "@/ui-kit/inputs/Input/Input";
 import Button from "@/ui-kit/buttons/Button/Button"
 import Link from "next/link";
@@ -8,7 +9,7 @@ const PageLogin = () => {
         <div className={styles.page}>
 
             <div className={styles.block}>
-                <img className={styles.block__logo} src="/img/logo/logo.svg" alt="logo" />
+                <Image className={styles.block__logo} src="/img/logo/logo.svg" alt="logo" />
                 <div>Войдите в свою учетную запись</div>
                 <div>Добро пожаловать!</div>
 

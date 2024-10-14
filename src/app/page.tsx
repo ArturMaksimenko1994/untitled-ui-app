@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Input from "@/ui-kit/inputs/Input/Input";
 
 const PageHome = () => {
   return (
