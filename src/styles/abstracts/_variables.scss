@@ -1,10 +1,20 @@
-// breakpoints
-$xs-break:  375px;
-$sm-break:  576px;
-$md-break:  768px;
-$lg-break:  992px;
-$xl-break:  1200px;
-$xxl-break: 1440px;
+// Breakpoints
+$break-xs: 375px;
+$break-sm: 576px;
+$break-md: 768px;
+$break-lg: 992px;
+$break-xl: 1200px;
+$break-2xl: 1440px;
+$break-3xl: 1920px;
+
+// Shadows
+$shadow-xs: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+$shadow-sm: 0 1px 2px 0 rgba(16, 24, 40, 0.06), 0 1px 3px 0 rgba(16, 24, 40, 0.1);
+$shadow-md: 0 2px 4px -2px rgba(16, 24, 40, 0.06), 0 4px 8px -2px rgba(16, 24, 40, 0.1);
+$shadow-lg: 0 4px 6px -2px rgba(16, 24, 40, 0.03), 0 12px 16px -4px rgba(16, 24, 40, 0.08);
+$shadow-xl: 0 8px 8px -4px rgba(16, 24, 40, 0.03), 0 20px 24px -4px rgba(16, 24, 40, 0.08);
+$shadow-2xl: 0 24px 48px -12px rgba(16, 24, 40, 0.18);
+$shadow-3xl: 0 32px 64px -12px rgba(16, 24, 40, 0.14);
 
 // Gray Palette
 $gray-25: #FCFCFD;

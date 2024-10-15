@@ -1,5 +1,6 @@
 
 import styles from "./Header.module.scss";
+import Image from 'next/image'
 import Button from "@/ui-kit/buttons/Button/Button";
 import Link from "next/link";
 
@@ -10,7 +11,7 @@ const Header = () => {
       <div className="container xxl">
         <div className={styles.header__row}>
 
-          <img src="/img/logo/Logo-dark.svg" alt=""/>
+          <Image src="/img/logo/Logo-dark.svg" alt="" />
 
           <nav className={styles.header__nav}>
             <Link href="#footer">Home</Link>

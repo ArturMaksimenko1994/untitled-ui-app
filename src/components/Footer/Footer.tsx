@@ -1,5 +1,5 @@
 import styles from "./Footer.module.scss";
-
+import Image from 'next/image'
 const Footer = () => {
   return (
     <footer className={styles.footer}>
@@ -12,7 +12,7 @@ const Footer = () => {
 
       <div className={styles.footer__center}>
         <div className="container">
-          <img src="/img/logo/Logo-dark.svg" alt=""/>
+          <Image src="/img/logo/Logo-dark.svg" alt="" />
         </div>
       </div>
       <div className={styles.footer__bottom}></div>
