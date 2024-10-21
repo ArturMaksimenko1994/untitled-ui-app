@@ -8,23 +8,27 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <div className="container xxl">
+      <div className="container container--xxl">
         <div className={styles.header__row}>
 
-          <Image src="/img/logo/Logo-dark.svg" alt="" />
+          <Image
+            className={styles.header__logo}
+            src="/img/logo/Logo-dark.svg"
+            alt="logo"
+            width={142}
+            height={32}
+          />
 
           <nav className={styles.header__nav}>
-            <Link href="#footer">Home</Link>
-            <Link href="/">Products</Link>
-            <Link href="/">Resources</Link>
-            <Link href="/">Pricing</Link>
+            <Link href="/">Главная</Link>
+            <Link href="/dashboard">Профиль</Link>
           </nav>
 
           <div className={styles.header__aut}>
             <Button
-              type="secondary-outline"
+              type="secondary"
               htmlElement="link"
-              link="register"
+              link="login"
               size="md"
             >
               Log in
@@ -33,7 +37,7 @@ const Header = () => {
             <Button
               type="primary"
               htmlElement="link"
-              link="about"
+              link="register"
               size="sm"
             >
               Sign up

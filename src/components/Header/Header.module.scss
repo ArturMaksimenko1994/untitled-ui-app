@@ -12,7 +12,9 @@
   }
 
   &__logo {
-
+    display: block;
+    width: 142px;
+    object-fit: contain;
   }
 
   &__nav {
@@ -21,7 +23,7 @@
     gap: 32px;
     flex: 1;
 
-    & > a {
+    &>a {
       font-weight: 600;
       font-size: 16px;
       line-height: 150%;
