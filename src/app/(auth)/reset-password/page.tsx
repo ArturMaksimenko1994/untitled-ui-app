@@ -1,7 +1,7 @@
 import styles from "./../auth.module.scss";
 import Image from 'next/image'
-import Input from "@/ui-kit/inputs/Input/Input";
-import Button from "@/ui-kit/buttons/Button/Button"
+import Input from "ui/inputs/Input/Input";
+import Button from "ui/buttons/Button/Button"
 import Link from "next/link";
 
 const PageResetPassword = () => {
