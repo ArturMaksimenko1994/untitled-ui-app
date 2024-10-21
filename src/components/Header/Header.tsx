@@ -22,6 +22,7 @@ const Header = () => {
           <nav className={styles.header__nav}>
             <Link href="/">Главная</Link>
             <Link href="/dashboard">Профиль</Link>
+            <Link href="/blog">Блог</Link>
           </nav>
 
           <div className={styles.header__aut}>
