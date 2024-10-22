@@ -10,15 +10,15 @@ const Header = () => {
     <header className={styles.header}>
       <div className="container container--xxl">
         <div className={styles.header__row}>
-
-          <Image
-            className={styles.header__logo}
-            src="/img/logo/Logo-dark.svg"
-            alt="logo"
-            width={142}
-            height={32}
-          />
-
+          <Link href="/">
+            <Image
+              className={styles.header__logo}
+              src="/img/logo/Logo-dark.svg"
+              alt="logo"
+              width={142}
+              height={32}
+            />
+          </Link>
           <nav className={styles.header__nav}>
             <Link href="/">Главная</Link>
             <Link href="/dashboard">Профиль</Link>

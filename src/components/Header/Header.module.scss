@@ -12,7 +12,8 @@
 
   &__logo {
     display: block;
-    width: 142px;
+    max-width: 142px;
+    width: 100%;
     object-fit: contain;
   }
 
