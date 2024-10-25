@@ -1,10 +1,11 @@
+import type { Metadata } from 'next'
 import styles from "./blog.module.scss"
 
 const PageBlog = () => {
   return (
     <div className={styles.page}>
       <div className="container">
-        СТРАНИЦА C ПОСТАМИ НОВОСТЕЙ
+      идет в разработке
       </div>
     </div>
   );

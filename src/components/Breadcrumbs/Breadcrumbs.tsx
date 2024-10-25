@@ -2,16 +2,30 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./Breadcrumbs.module.scss";
+import Image from 'next/image'
 
 const Breadcrumbs = () => {
   const pathname = usePathname();
+
+  if (pathname === "/") {
+    return null;
+  }
+
   const pathArray = pathname.split("/").filter((path) => path);
 
   return (
     <nav className={styles.breadcrumb} aria-label="Breadcrumb">
-      <ol>
+      <ul>
         <li>
-          <Link href="/">Home</Link>
+        <Link href="/">
+            <Image
+              className={styles.header__logo}
+              src="/icons/Home.svg"
+              alt="logo"
+              width={20}
+              height={20}
+            />
+          </Link>
         </li>
         {pathArray.map((path, index) => {
           const href = "/" + pathArray.slice(0, index + 1).join("/");
@@ -26,7 +40,7 @@ const Breadcrumbs = () => {
             </li>
           );
         })}
-      </ol>
+      </ul>
     </nav>
   );
 };
