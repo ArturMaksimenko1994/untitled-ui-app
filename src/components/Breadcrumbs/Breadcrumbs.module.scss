@@ -1,10 +1,11 @@
 .breadcrumb {
-    max-width: 1344px;
+    max-width: 1280px;
     width: 100%;
     margin: 0 auto;
     padding: 0 32px;
 
     & ul {
+        padding: 16px 0;
         align-items: center;
         display: flex;
         gap: 6px;

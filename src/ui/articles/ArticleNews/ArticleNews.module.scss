@@ -1,0 +1,79 @@
+@import '@/abstracts/variables';
+
+.article {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__link {
+    position: absolute;
+    inset: 0;
+  }
+
+  &__picture {
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  &__info {
+    margin: 20px 0 8px 0;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    & hr {
+      padding: 0;
+      width: 5px;
+      height: 5px;
+      border-radius: 50px;
+      background-color: $brand-700;
+      outline: none;
+      border: none;
+      margin: 0 5px;
+    }
+  }
+
+  &__author,
+  &__date  {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    color: $brand-700;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 130%;
+    color: $gray-900;
+  }
+
+  &__description {
+    margin: 8px 0 24px 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $gray-600;
+    flex: 1;
+  }
+
+  &__marker {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  &__tag {
+    border-radius: 16px;
+    padding: 2px 10px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: $brand-700;
+    background: $brand-50;
+  }
+}
