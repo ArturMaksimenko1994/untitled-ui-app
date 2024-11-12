@@ -8,7 +8,7 @@ interface IProps {
   description: string;
   imageSrc: string;
   alt: string;
-  author: string;
+  author?: string;
   date: string;
   tags: string[];
 }

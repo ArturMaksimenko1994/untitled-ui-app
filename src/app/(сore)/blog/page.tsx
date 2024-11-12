@@ -1,49 +1,66 @@
-import styles from "./blog.module.scss"
+// app/(core)/blog/page.tsx
+import styles from "./blog.module.scss";
 import ArticleNews from "@/ui/articles/ArticleNews/ArticleNews";
 
-const PageBlog = () => {
+interface Post {
+  id: string;
+  title: string;
+  description: string;
+  picture: string;
+  author_post: string;
+  link: string;
+  createdAt: string;
+}
+
+async function fetchPosts(): Promise<Post[]> {
+  try {
+    const res = await fetch('https://672ccd21fd89797156404092.mockapi.io/v1/blog', {
+      next: { revalidate: 60 }, // Опционально: для ISR (инкрементальной генерации)
+    });
+
+    if (!res.ok) {
+      throw new Error(`Ошибка HTTP: ${res.status}`);
+    }
+
+    const posts: Post[] = await res.json();
+
+    // Логирование данных для проверки
+    console.log('Полученные данные:', posts);
+
+    // Возвращаем данные без изменений
+    return posts;
+  } catch (error) {
+    console.error('Ошибка при получении данных:', error);
+    return [];
+  }
+}
+
+const PageBlog = async () => {
+  const posts = await fetchPosts();
 
   return (
-    <section className={styles.news}>
-      <div className="container">
-        <h2 className="h4">Все записи в блоге</h2>
-        <div className={styles.news__row}>
-
-          <ArticleNews
-            link="#"
-            title="PM mental models"
-            description="Mental models are simple expressions of complex processes or relationships."
-            imageSrc="https://www.serconsrus.ru/app/uploads/2024/10/dsc08556-1-1-1200x929.jpg.webp"
-            alt="Новость"
-            author="Demi Wilkinson"
-            date="16 Jan 2025"
-            tags={["Product"]}
-          />
-
-          <ArticleNews
-            link="#"
-            title="PM mental models"
-            description="Mental models are simple expressions of complex processes or relationships."
-            imageSrc="https://www.serconsrus.ru/app/uploads/2024/10/photo_2024-10-07_13-00-25-880x586.jpg.webp"
-            alt="Новость"
-            author="Demi Wilkinson"
-            date="16 Jan 2025"
-            tags={["Product"]}
-          />
-
-          <ArticleNews
-            link="#"
-            title="PM mental models"
-            description="Mental models are simple expressions of complex processes or relationships."
-            imageSrc="https://www.serconsrus.ru/app/uploads/2024/09/8f9nfn2px368-880x635.jpg.webp"
-            alt="Новость"
-            author="Demi Wilkinson"
-            date="16 Jan 2025"
-            tags={["Product"]}
-          />
+    <>
+      <section className={styles.news}>
+        <div className="container">
+          <h2 className="h4">Все записи в блоге</h2>
+          <div className={styles.news__row}>
+            {posts.map((post) => (
+              <ArticleNews
+                key={post.id}
+                link={post.link} // Используем ссылку из данных
+                title={post.title}
+                description={post.description} // Описание из данных
+                imageSrc={post.picture}
+                alt={post.title}
+                author={post.author_post}
+                date={new Date(post.createdAt).toLocaleDateString()} // Форматируем дату
+                tags={post.tags || []}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

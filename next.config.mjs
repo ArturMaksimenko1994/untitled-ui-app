@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['www.serconsrus.ru'], // Добавьте сюда нужный домен
+        domains: ['loremflickr.com'], // Добавьте сюда нужный домен
     },
 };
 
