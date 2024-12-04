@@ -1,4 +1,3 @@
-@use "../abstracts/media-queries" as *;
 
 // Миксин для мобильного подхода
 @mixin respond-to-mobile($breakpoint) {
