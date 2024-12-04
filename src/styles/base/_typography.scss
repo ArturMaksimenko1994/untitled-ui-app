@@ -1,6 +1,3 @@
-@use "../abstracts/variables" as *;
-@use "../abstracts/media-queries" as *;
-
 .h1,
 .h2,
 .h3,
@@ -203,8 +200,8 @@
     margin: 16px 0;
 
     table {
-      background-color: #F9FAFB;
-      border: 1px solid #E4E7EC;
+      background-color: #f9fafb;
+      border: 1px solid #e4e7ec;
       width: 100%;
 
       th,
