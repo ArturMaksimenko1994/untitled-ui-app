@@ -21,25 +21,25 @@
         "name": "next"
       }
     ],
-    "baseUrl": "src/",
+    "baseUrl": ".",
     "paths": {
+      "@/public/*": [
+        "public/*"
+      ],
       "@/api/*": [
-        "api/*"
+        "src/api/*"
       ],
       "@/graphql/*": [
-        "graphql/*"
+        "src/graphql/*"
       ],
       "@/components/*": [
-        "components/*"
+        "src/components/*"
       ],
       "@/lib/*": [
-        "lib/*"
+        "src/lib/*"
       ],
       "@/ui/*": [
-        "ui/*"
-      ],
-      "@/abstracts/*": [
-        "styles/abstracts/*"
+        "src/ui/*"
       ]
     },
     "target": "ES2017"

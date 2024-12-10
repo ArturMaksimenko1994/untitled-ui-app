@@ -1,4 +1,4 @@
-import '../../../public/fonts/fonts.css';
+import '@/public/fonts/fonts.css';
 import '../../styles/app.scss';
 
 import Header from "@/components/Header/Header";

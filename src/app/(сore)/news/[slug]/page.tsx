@@ -43,13 +43,16 @@ const PageBlogSingle = async ({ params }: PageProps) => {
                 )} */}
               </div>
               {post.imageSrc && (
-                <Image
-                  className={styles.blog__picture}
-                  src={post.imageSrc}
-                  alt={post.title}
-                  width={1216}
-                  height={516}
-                />
+
+                <div className={styles.blog__picture}>
+                  <Image
+                    src={post.imageSrc}
+                    alt={post.title}
+                    style={{ objectFit: 'cover' }}
+                    fill
+                  />
+                </div>
+
               )}
             </div>
           </div>
