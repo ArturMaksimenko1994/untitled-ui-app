@@ -1,7 +1,8 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   images: {
-    domains: ["www.serconsrus.ru"], // Добавьте сюда нужный домен
+    domains: ["untitled-ui-api.ru"],
   },
   sassOptions: {
     includePaths: ["./src/styles/abstracts"],
